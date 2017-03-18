@@ -12,7 +12,7 @@ players = tree.xpath('//*[contains(@id, "playerStatsRow")]/td[3]/a/text()')
 page1 = requests.get('http://www.pgatour.com/stats/stat.02671.html') #current FedEx Cup rankings
 tree = html.fromstring(page1.text)
 fedex = tree.xpath('//*[contains(@id, "playerStatsRow")]/td[3]/a/text()')
-page2 = requests.get('http://www.pgatour.com/data/r/457/field.json')
+page2 = requests.get('http://www.pgatour.com/data/r/'+ sys.argv[1] +'/field.json')
 tree2 = page2.json()
 field = tree2['Tournament']['Players']
 
