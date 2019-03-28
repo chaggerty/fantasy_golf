@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/local/bin/python3
 
 from lxml import html
 import sys
@@ -20,7 +20,7 @@ field = tree2['Tournament']['Players']
 lineup = []
 print("Based on world rankings:")
 for guy in players:
-	temp = string.split(guy)
+	temp = str.split(guy)
 	name = temp[1] + ', ' + temp[0]
 	for f in field:
 		if name in f['PlayerName']: 
@@ -32,7 +32,7 @@ for guy in players:
 print("\nBased on FedEx Cup Rankings:")
 lineup = []
 for guy in fedex:
-	temp = string.split(guy)
+	temp = str.split(guy)
 	name = temp[1] + ', ' + temp[0]
 	for f in field:
 		if name in f['PlayerName']: 
