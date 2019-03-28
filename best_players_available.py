@@ -24,7 +24,7 @@ for guy in players:
 	name = temp[1] + ', ' + temp[0]
 	for f in field:
 		if name in f['PlayerName']: 
-			lineup.append(f['PlayerName'].encode('utf-8'))
+			lineup.append(f['PlayerName'])
 			if len(lineup) ==7:
 				print(lineup)
 			break	
@@ -36,7 +36,7 @@ for guy in fedex:
 	name = temp[1] + ', ' + temp[0]
 	for f in field:
 		if name in f['PlayerName']: 
-			lineup.append(f['PlayerName'].encode('utf-8'))
+			lineup.append(f['PlayerName'])
 			if len(lineup) ==7:
 				print(lineup)
 			break
